@@ -46,8 +46,8 @@
 #X obj 130 282 route 1;
 #X obj 169 405 print afterroute;
 #X msg 130 312 \$1;
-#X obj 130 344 * 127;
 #X text 12 240 if 1 touch \, use position to set detection level, f 24;
+#X obj 130 344 * 70;
 #X connect 0 0 6 0;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
@@ -57,9 +57,9 @@
 #X connect 7 0 10 0;
 #X connect 7 0 11 0;
 #X connect 11 0 13 0;
-#X connect 13 0 14 0;
-#X connect 14 0 12 0;
-#X connect 14 0 1 0;
+#X connect 13 0 15 0;
+#X connect 15 0 12 0;
+#X connect 15 0 1 0;
 #X restore 641 213 pd readtouchbar;
 #X msg 528 212 0.2;
 #X obj 581 400 print volume;
