@@ -27,11 +27,11 @@
 #X msg 256 206 dry 0.25;
 #X obj 253 17 loadbang;
 #X obj 16 45 *~ 0.6;
-#X obj 569 232 vsl 16 136 0 0.7 0 0 empty empty VOLUME 0 -9 0 10 #ffffff #ffc7c6 #ff0400 0 1;
+#X obj 569 232 vsl 16 136 0 1 0 0 empty empty VOLUME 0 -9 0 10 #ffffff #ffc7c6 #ff0400 0 1;
 #X obj 152 127 *~;
 #X text 601 337 volume \, controlled by Trill sensor;
 #X text 212 418 change volume;
-#N canvas 160 0 1620 956 readtouchbar 0;
+#N canvas 160 0 1620 956 readtouchbar 1;
 #X obj 197 16 inlet;
 #X obj 74 407 outlet;
 #X msg 308 37 new touchbar 1 BAR;
@@ -47,7 +47,7 @@
 #X obj 169 405 print afterroute;
 #X msg 130 312 \$1;
 #X text 12 240 if 1 touch \, use position to set detection level, f 24;
-#X obj 130 344 * 70;
+#X obj 439 365 * 70;
 #X connect 0 0 6 0;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
@@ -57,9 +57,8 @@
 #X connect 7 0 10 0;
 #X connect 7 0 11 0;
 #X connect 11 0 13 0;
-#X connect 13 0 15 0;
-#X connect 15 0 12 0;
-#X connect 15 0 1 0;
+#X connect 13 0 1 0;
+#X connect 13 0 12 0;
 #X restore 641 213 pd readtouchbar;
 #X obj 581 400 print volume;
 #X msg 509 241 0.6;
