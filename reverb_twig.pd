@@ -24,11 +24,11 @@
 #X obj 9 7 inlet~ reverbsignal;
 #X obj 139 7 inlet initialise;
 #X obj 177 616 outlet~ reverbaddedsignal;
-#X text 399 609 Based on a patch by Pierre Massat \, GuitarExtended \, 2012;
 #X text 656 434 NOT CURRENTLY IN USE;
 #X text 709 486 Roomsize;
 #X obj 365 8 inlet freezereverb;
 #X obj 487 8 inlet bypassreverb;
+#X text 413 620 Based on a patch by Pierre Massat \, GuitarExtended \, 2012;
 #X connect 0 0 17 0;
 #X connect 1 0 17 0;
 #X connect 2 0 0 0;
@@ -47,5 +47,5 @@
 #X connect 23 0 19 0;
 #X connect 23 0 20 0;
 #X connect 23 0 21 0;
-#X connect 28 0 2 0;
-#X connect 29 0 3 0;
+#X connect 27 0 2 0;
+#X connect 28 0 3 0;
