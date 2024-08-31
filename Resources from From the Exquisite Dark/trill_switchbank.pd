@@ -1,4 +1,4 @@
-#N canvas 224 224 922 410 12;
+#N canvas 1114 204 922 410 12;
 #X obj 24 23 inlet;
 #X text 526 20 select soundbank via Trill Bar;
 #X obj 24 59 moses 15;
@@ -7,37 +7,30 @@
 #X obj 253 128 moses 105;
 #X text 196 101 BLUE?;
 #X text 324 128 GREEN? OR YELLOW?;
-#X obj 24 90 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 24 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 24 90 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 24 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 24 133 moses 1;
 #X msg 24 171 4;
 #X msg 70 170 1;
 #X obj 24 333 outlet;
-#X obj 129 128 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 129 148 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 129 128 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 129 148 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 129 170 moses 1;
 #X msg 129 208 4;
 #X msg 175 207 1;
-#X obj 253 158 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 253 178 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 253 158 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 253 178 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 253 201 moses 1;
 #X msg 253 239 4;
 #X msg 299 238 1;
-#X obj 389 158 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 389 178 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 389 158 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 389 178 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 389 201 moses 1;
 #X msg 389 239 4;
 #X msg 435 238 1;
 #X text 73 20 input from Trill Bar;
 #X text 480 240 comment;
+#X text 542 152 YELLOW position is 0.8?;
 #X connect 0 0 2 0;
 #X connect 2 0 8 0;
 #X connect 2 1 4 0;
