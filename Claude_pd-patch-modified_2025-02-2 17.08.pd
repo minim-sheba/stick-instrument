@@ -1,0 +1,60 @@
+#N canvas 31 20 988 956 readtouchbar 1;
+#X obj 197 16 inlet;
+#X msg 308 37 new touchbar 1 BAR;
+#X obj 308 79 s bela_setTrill;
+#X obj 272 158 r bela_trill;
+#X obj 272 204 route touchbar;
+#X obj 197 251 list;
+#X text 330 16 initialise sensor;
+#X text 268 133 read sensor data stream;
+#X obj 196 292 print touchbar;
+#X obj 130 282 route 1;
+#X obj 319 561 print afterroute;
+#X msg 130 312 \$1;
+#X obj 179 66 metro 300;
+
+# Mute control section
+#X obj 131 456 moses 0.2;
+#X obj 131 486 > 0;
+#X obj 131 516 change;
+#X obj 131 546 t b;
+#X obj 131 576 f;
+#X obj 131 606 + 1;
+#X obj 131 636 % 2;
+#X obj 131 724 outlet muteaudio;
+#X obj 30 726 print mutevalue;
+
+# Volume control section
+#X obj 305 490 moses 0.7;
+#X obj 305 526 * 15;
+#X obj 295 590 outlet valuevolume;
+#X obj 448 567 bng 19 250 50 0;
+#X obj 448 531 delay 5000;
+#X obj 448 596 outlet start_phasor;
+
+#X connect 0 0 1 0;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 9 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 5 0;
+#X connect 13 0 14 0;
+#X connect 13 1 22 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 19 0 17 1;
+#X connect 19 0 21 0;
+#X connect 22 0 23 0;
+#X connect 22 1 27 0;
+#X connect 23 0 24 0;
+#X connect 23 0 10 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 0;

@@ -1,0 +1,78 @@
+#N canvas 31 20 988 956 readtouchbar 1;
+#X obj 197 16 inlet;
+#X msg 308 37 new touchbar 1 BAR;
+#X obj 308 79 s bela_setTrill;
+#X obj 272 158 r bela_trill;
+#X obj 272 204 route touchbar;
+#X obj 197 251 list;
+#X text 330 16 initialise sensor;
+#X text 268 133 read sensor data stream;
+#X obj 196 292 print touchbar;
+#X obj 130 282 route 1;
+#X obj 319 561 print afterroute;
+#X msg 130 312 \$1;
+#X obj 179 66 metro 300;
+
+# Touch detection section
+#X obj 130 342 t f b;  # Split flow to handle both value and presence
+#X obj 160 372 1;      # Create "touch present" flag
+#X obj 130 402 moses 0.2;
+#X obj 130 432 > 0;    # Convert position to binary "in mute zone"
+#X obj 130 462 * 1;    # Multiply by touch present flag
+#X obj 160 402 s touch_present;
+#X obj 130 492 r touch_present;
+#X obj 130 522 change; # Now detects real touch state changes
+#X obj 130 552 t b;    # Convert to bang
+#X obj 130 582 f;      # Store toggle state
+#X obj 130 612 + 1;    # Increment
+#X obj 130 642 % 2;    # Modulo for toggle
+#X obj 130 724 outlet muteaudio;
+#X obj 30 726 print mutevalue;
+
+# Reset touch present flag when no touch data
+#X obj 400 282 t b;    # Convert metro tick to bang
+#X obj 400 312 0;      # Zero value
+#X obj 400 342 s touch_present;
+
+# Volume control section remains the same
+#X obj 305 490 moses 0.7;
+#X obj 305 526 * 15;
+#X obj 295 590 outlet valuevolume;
+#X obj 448 567 bng 19 250 50 0;
+#X obj 448 531 delay 5000;
+#X obj 448 596 outlet start_phasor;
+
+#X connect 0 0 1 0;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 8 0;
+#X connect 5 0 9 0;
+#X connect 5 0 27 0;
+#X connect 9 0 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 5 0;
+#X connect 13 0 15 0;
+#X connect 13 1 14 0;
+#X connect 14 0 18 0;
+#X connect 15 0 16 0;
+#X connect 15 1 30 0;
+#X connect 16 0 17 0;
+#X connect 17 0 20 0;
+#X connect 19 0 17 1;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 0 22 1;
+#X connect 24 0 26 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 30 0 31 0;
+#X connect 30 1 34 0;
+#X connect 31 0 32 0;
+#X connect 31 0 10 0;
+#X connect 34 0 35 0;
+#X connect 35 0 33 0;
