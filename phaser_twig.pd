@@ -36,6 +36,9 @@
 #X msg 528 192 0.3;
 #X msg 497 -15 8;
 #X msg 498 83 0.8;
+#X obj 247 -68 inlet togglephasor;
+#X obj 180 -28 tgl 16 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 81 -7 *~;
 #X connect 0 0 8 0;
 #X connect 0 0 24 0;
 #X connect 1 0 2 0;
@@ -63,12 +66,15 @@
 #X connect 17 0 26 0;
 #X connect 21 0 14 0;
 #X connect 21 0 15 0;
-#X connect 31 0 32 0;
-#X connect 31 0 5 0;
-#X connect 31 0 22 0;
+#X connect 31 0 39 0;
 #X connect 33 0 35 0;
 #X connect 33 0 36 0;
 #X connect 33 0 34 0;
 #X connect 34 0 17 0;
 #X connect 35 0 0 0;
 #X connect 36 0 12 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 1;
+#X connect 39 0 22 0;
+#X connect 39 0 5 0;
+#X connect 39 0 32 0;
