@@ -1,5 +1,4 @@
-#N canvas 100 100 650 400 10;
-#X obj 105 39 inlet;
+#N canvas 662 211 650 400 10;
 #X obj 105 288 outlet;
 #X text 149 39 Input from touchbar position (0.2-0.7 range);
 #X text 148 288 Scaled output (0-1);
@@ -13,9 +12,10 @@
 #X obj 105 186 pow 2;
 #X text 231 186 Optional: Apply curve for more natural volume control;
 #X obj 223 224 print scaled-volume;
-#X connect 0 0 5 0;
+#X obj 62 41 vsl 16 136 0 0.5 0 0 empty empty empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X connect 4 0 5 0;
 #X connect 5 0 6 0;
-#X connect 6 0 7 0;
-#X connect 7 0 11 0;
-#X connect 11 0 1 0;
-#X connect 11 0 13 0;
+#X connect 6 0 10 0;
+#X connect 10 0 0 0;
+#X connect 10 0 12 0;
+#X connect 13 0 4 0;
