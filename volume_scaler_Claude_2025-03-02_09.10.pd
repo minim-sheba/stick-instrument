@@ -1,0 +1,15 @@
+#N canvas 100 100 450 300 10;
+#X obj 105 39 inlet;
+#X obj 105 224 outlet;
+#X text 149 39 Input from touchbar/moses;
+#X text 148 224 Scaled output (0-1);
+#X text 23 10 Volume scaler - scales incoming values to 0-1 range;
+#X obj 105 88 / 15;
+#X text 147 87 Assuming input range is 0-15;
+#X obj 105 130 clip 0 1;
+#X text 147 130 Ensure output stays in 0-1 range;
+#X obj 185 169 print scaled-volume;
+#X connect 0 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 0 9 0;
