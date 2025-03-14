@@ -10,12 +10,12 @@
 #X obj 105 132 * 2;
 #X text 231 132 Multiply by 2 to get 0-1 range (since 0.5 * 2 = 1);
 #X text 35 358 Abstraction created in collaboration with Claude AI 2025-03-03.;
-#X text 231 228 Scale final output to 0-5 range;
-#X text 149 320 Scaled output (0-5);
 #X text 23 10 Volume scaler - Handles values coming from the volume zone of the Trill Bar;
 #X obj 105 228 * 12;
+#X text 149 320 Scaled output (0-12);
+#X text 231 228 Scale final output to 0-12 range;
 #X connect 0 0 3 0;
 #X connect 3 0 8 0;
-#X connect 5 0 14 0;
+#X connect 5 0 12 0;
 #X connect 8 0 5 0;
-#X connect 14 0 1 0;
+#X connect 12 0 1 0;
