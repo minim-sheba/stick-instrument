@@ -10,6 +10,6 @@ The Twigstrument's development is supported by PIGSPIGSPIGS' commissioners:
 - SPOR Festival (DK)
 - Wigmore Hall (UK)
 
-with additional support from Cyborg Soloists, a UKRI Future Leaders Fellowship based at Royal Holloway, University of London, led by Dr Zubin Kanga (the Bela Mini is on loan from this project) and Arts Council England.
+with additional support from Cyborg Soloists, a UKRI Future Leaders Fellowship based at Royal Holloway, University of London, led by Dr Zubin Kanga (the Bela Mini is on loan from this project) and from Arts Council England.
 
-This project is also a case study for a research project I am undertaking for Cyborg Soloists into seeing how LLMs might be helpful for learning a visual music coding language (Pure Data), with particular attention to the value which can be extracted by the AI getting things wrong (as opposed to the more usual uses of AI code being to speed things up by it getting things right). This project is the reason why you will find so many iterations of dodgy code produced by Claude.ai in this repository...
+This project is also a case study for a research project I am undertaking for Cyborg Soloists into seeing how LLMs might be helpful for learning a visual music coding language (Pure Data), with particular attention to the value which can still be extracted by the AI getting things wrong (as opposed to the more usual uses of AI code being to speed things up by it getting things right). This project is the reason why you will find so many iterations of dodgy code produced by Claude.ai in this repository...
