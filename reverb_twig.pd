@@ -1,4 +1,4 @@
-#N canvas 1698 934 914 669 10;
+#N canvas 2048 800 1447 1126 10;
 #X obj 178 349 freeverb~;
 #X msg 327 109 roomsize 0.5;
 #X msg 417 108 damping 0.2;
@@ -8,6 +8,11 @@
 #X obj 326 17 inlet initialise;
 #X obj 177 616 outlet~ reverbaddedsignal;
 #X text 415 638 Based on a patch by Pierre Massat \, GuitarExtended \, 2012;
+#X obj 166 18 inlet adjustRoomSize;
+#X obj 174 143 pack roomsize 0.5;
+#X obj 173 113 bng 16 250 50 0 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000;
+#X obj 166 45 v pos-stream;
+#X obj 166 72 volscale;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -18,3 +23,9 @@
 #X connect 6 0 2 0;
 #X connect 6 0 3 0;
 #X connect 6 0 4 0;
+#X connect 9 0 12 0;
+#X connect 10 0 0 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 1;
+#X connect 13 0 11 0;
