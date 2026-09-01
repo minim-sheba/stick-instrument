@@ -1,4 +1,4 @@
-#N canvas 365 416 2690 1448 10;
+#N canvas 693 476 2690 1448 10;
 #X obj 37 75 adc~;
 #X obj 37 599 dac~;
 #X obj 484 39 loadbang;
@@ -92,7 +92,7 @@
 #X text 787 103 initialise pins 24 & 25 for rotary switch;
 #X obj 181 105 r bela_digitalIn24;
 #X obj 210 127 r bela_digitalIn25;
-#N canvas 1599 501 1316 1045 TrillGateway 1;
+#N canvas 1599 501 1316 1045 TrillGateway 0;
 #X obj 23 38 inlet;
 #X text 13 8 Trill data in;
 #X obj 201 69 inlet;
